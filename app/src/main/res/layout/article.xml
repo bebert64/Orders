@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/my_custom_title"
+                android:id="@+id/title"
                 style="@style/ARTICLES"
                 android:layout_width="wrap_content"
                 android:text='@{article.title}'
@@ -30,15 +30,13 @@
                 tools:text="Cesar salade" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/description"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="salade tomate oignon"
+                android:text='@{article.description}'
                 tools:text="salade tomate oignon" />
         </LinearLayout>
-
-        <!--            android:text="title" />-->
 
         <TextView
             android:id="@+id/price_tag"
@@ -80,7 +78,7 @@
             android:id="@+id/plus_button"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:text="+" />
+            android:text="@string/plus_sign" />
 
     </LinearLayout>
 

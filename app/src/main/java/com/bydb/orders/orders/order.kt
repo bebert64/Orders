@@ -1,25 +1,25 @@
 package com.bydb.orders.orders
 
-class Order () {
+class Order {
 
-    var articles: MutableList<Article>? = null
+    var categories: MutableMap<String, Category>? = null
 
-    fun addArticle (article: Article) {
-        if (articles == null) {
-            articles = mutableListOf(article)
+    fun addCategory (category: Category) {
+        if (categories == null) {
+            categories = mutableMapOf(category.ID to category)
         } else {
-            articles?.add(article)
+            categories?.plusAssign(category.ID to category)
         }
     }
 
-    val amountTotal: Double
+    var amountTotal: Double = 0.0
         get() {
-            return if (articles == null) {
+            return if (categories == null) {
                 0.0
             } else {
                 var amount = 0.0
-                for (article in articles!!) {
-                    amount += article.price * article.quantity
+                for (category in categories!!.values) {
+                    amount += category.amountTotal
                 }
                 amount
             }
@@ -27,12 +27,12 @@ class Order () {
 
     private val amountPaid: Double
         get() {
-            return if (articles == null) {
+            return if (categories == null) {
                 0.0
             } else {
                 var amount = 0.0
-                for (article in articles!!) {
-                    amount += article.amount_paid
+                for (category in categories!!.values) {
+                    amount += category.amountPaid
                 }
                 amount
             }
@@ -43,8 +43,56 @@ class Order () {
 
 }
 
-class Article(var title: String, var price: Double,
-              var quantity: Int = 0, var amount_paid: Double = 0.0)
+
+class Category(val ID: String,
+                 val title: String,
+                 val description: String,
+                 var articles: MutableMap<String, Article>?) {
+
+    fun addArticle(article: Article) {
+        if (articles.isNullOrEmpty()) {
+            articles = mutableMapOf(article.ID to article)
+        }
+        else if (article.ID !in articles!!.keys) {
+            articles!!.plusAssign(article.ID to article)
+        }
+    }
+
+    var amountTotal: Double = 0.0
+        get() {
+            return if (articles == null) {
+                0.0
+            } else {
+                var amount = 0.0
+                for (article in articles!!.values) {
+                    amount += article.price * article.quantity
+                }
+                amount
+            }
+        }
+
+    val amountPaid: Double
+        get() {
+            return if (articles == null) {
+                0.0
+            } else {
+                var amount = 0.0
+                for (article in articles!!.values) {
+                    amount += article.amount_paid
+                }
+                amount
+            }
+        }
+}
+
+
+
+class Article(val ID: String,
+              var title: String,
+              var description: String,
+              var price: Double,
+              var quantity: Int = 0,
+              var amount_paid: Double = 0.0)
 
 val myOrder: Order = Order()
 

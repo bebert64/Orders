@@ -15,10 +15,10 @@ class viewOrder: Activity() {
         viewBinding = ViewOrderBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         //val lin_lay = view_binding.linLay
-        myOrder.articles!!.let() {
+        myOrder.categories!!.let() {
             for (article in it) {
                 val textView = TextView(this)
-                textView.text = article.title
+//                textView.text = article.title
                 viewBinding.root.addView(textView)
             }
         }

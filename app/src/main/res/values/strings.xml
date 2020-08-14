@@ -4,4 +4,6 @@
     <string name="view_order">Voir les commandes</string>
     <string name="calculate_price">Calculer le prix</string>
     <string name="minus_sign">-</string>
+    <string name="total">TOTAL</string>
+    <string name="plus_sign">+</string>
 </resources>
