@@ -22,7 +22,7 @@
             android:layout_weight="1">
 
             <LinearLayout
-                android:id="@+id/articles_layout"
+                android:id="@+id/categories_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -39,7 +39,7 @@
             android:textAppearance="@style/CATEGORY" />
 
         <TextView
-            android:id="@+id/price_result"
+            android:id="@+id/price_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
@@ -50,7 +50,7 @@
             tools:text="22,5€" />
 
         <Button
-            android:id="@+id/place_order_button"
+            android:id="@+id/order_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/place_order" />

@@ -2,7 +2,7 @@ package com.bydb.orders
 import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
-import com.bydb.orders.databinding.PlaceOrderBinding
+//import com.bydb.orders.databinding.PlaceOrderBinding
 import com.bydb.orders.databinding.ViewOrderBinding
 import com.bydb.orders.orders.myOrder
 
