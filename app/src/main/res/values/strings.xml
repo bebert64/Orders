@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">Orders</string>
-    <string name="place_order">Commander</string>
+    <string name="app_name">spleat</string>
+    <string name="place_order">Sur place</string>
     <string name="view_order">Voir les commandes</string>
     <string name="calculate_price">Calculer le prix</string>
     <string name="minus_sign">-</string>
     <string name="total">TOTAL</string>
     <string name="plus_sign">+</string>
+    <string name="take_away">A emporter</string>
+    <string name="home_delivery">Livraison</string>
+    <string name="news_favorits">News</string>
+    <string name="order">Commander</string>
+    <string name="my_profil">Mon profile</string>
 </resources>

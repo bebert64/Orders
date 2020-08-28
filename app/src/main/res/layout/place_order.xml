@@ -16,30 +16,27 @@
         tools:context=".PlaceOrder">
 
 
-        <TextView
-            android:id="@+id/category_text"
-            style="@style/CATEGORY"
-            android:text="BOISSONS"
-            android:textAppearance="@style/CATEGORY"
-            tools:text="BOISSONS" />
-
-        <LinearLayout
-            android:id="@+id/articles_layout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/articles_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical" />
+        </ScrollView>
+
 
         <TextView
             android:id="@+id/total_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif-black"
             android:text="@string/total"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textAppearance="@style/CATEGORY" />
 
         <TextView
             android:id="@+id/price_result"
