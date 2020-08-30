@@ -21,17 +21,13 @@ import kotlinx.android.synthetic.main.fragment_order.*
 
 class OrderFragment : Fragment()  {
 
-//    private var articles: MutableList<Article>? = null
     private var categories: MutableMap<String, CategoryBinding>? = null
-//    lateinit var categoriesLayout: LinearLayout
-//    lateinit var categories_layout: LinearLayout
     lateinit var binding: FragmentOrderBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle? ): View? {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_order, container, false)
-//        categories_layout = findViewById<LinearLayout>(R.id.categories_layout)
         for (category in ninkasiCategories) {
             addCategory(category)
         }
@@ -70,35 +66,20 @@ class OrderFragment : Fragment()  {
 
         val articleBinding: ArticleBinding = ArticleBinding.inflate(this.layoutInflater)
         articleBinding.article = article
-        articleBinding.plusButton.setOnClickListener {
-            article.quantity += 1
-            articleBinding.invalidateAll()
+//        articleBinding.plusButton.setOnClickListener {
+//            article.quantity += 1
+//            articleBinding.invalidateAll()
 //            viewBinding.invalidateAll()
-        }
-        articleBinding.minusButton.setOnClickListener {
-            article.quantity = when (articleBinding.article!!.quantity) {
-                0 -> 0
-                else -> articleBinding.article!!.quantity - 1
-            }
-            articleBinding.invalidateAll()
-//            viewBinding.invalidateAll()
-        }
-        categoryBinding.articlesLayout.addView(articleBinding.root)
-//        if (articles == null) {
-//            articles = mutableListOf(article)
-//        } else {
-//            articles?.add(article)
 //        }
-    }
-
-//    fun fragment_order() {
-//        for (article in articles!!) {
-//            var quantity = article.view_binding!!.quantity.text.toString().toInt()
-//            if (quantity != 0) {
-//                var order_article = OrderArticle(article, quantity, 0.0)
-//                my_order.add_article(order_article)
+//        articleBinding.minusButton.setOnClickListener {
+//            article.quantity = when (articleBinding.article!!.quantity) {
+//                0 -> 0
+//                else -> articleBinding.article!!.quantity - 1
 //            }
+//            articleBinding.invalidateAll()
+//            viewBinding.invalidateAll()
 //        }
-//    }
+        categoryBinding.articlesLayout.addView(articleBinding.root)
+    }
 
 }

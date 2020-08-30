@@ -15,6 +15,10 @@
         android:orientation="vertical"
         tools:context=".PlaceOrder">
 
+        <include
+            layout="@layout/categories_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <ScrollView
             android:layout_width="match_parent"
