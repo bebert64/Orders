@@ -12,14 +12,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fadingEdge="none">
+        android:fadingEdge="none"
+        android:paddingBottom="16dp">
 
         <TextView
             android:id="@+id/description_text"
             style="@style/ARTICLE_DESCRIPTION"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
             android:text='@{article.description}'
             android:textAppearance="@style/ARTICLE_DESCRIPTION"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,8 +35,6 @@
             style="@style/ARTICLES"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:text='@{article.title}'
             android:textAppearance="@style/ARTICLES"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,15 +44,14 @@
         <View
             android:id="@+id/vertical_divider"
             android:layout_width="6dp"
-            android:layout_height="0dp"
+            android:layout_height="6dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
             android:background="@color/colorPrimary"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@id/title_text"
-            app:layout_constraintEnd_toStartOf="@+id/price_tag"
             app:layout_constraintStart_toEndOf="@id/title_text"
-            app:layout_constraintTop_toTopOf="@id/title_text" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/price_tag"
@@ -79,11 +78,12 @@
             android:id="@+id/quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="6dp"
-            android:paddingRight="6dp"
             android:text="@={`` + article.quantity}"
             android:textAppearance="@style/ARTICLE_QUANTITY"
-            android:visibility="gone" />
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_text"
+            tools:text="2" />
 
         <Button
             android:id="@+id/plus_button"

@@ -15,46 +15,58 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
-                tools:text="BOISSONS" />
+                tools:text="BOISSONS"
+                style="@style/button_menu_categories" />
 
             <Button
                 android:id="@+id/button6"
+                style="@style/button_menu_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
                 tools:text="TAPAS" />
 
             <Button
                 android:id="@+id/button2"
+                style="@style/button_menu_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
                 tools:text="ENTREE" />
 
             <Button
                 android:id="@+id/button4"
+                style="@style/button_menu_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
                 tools:text="PLAT" />
 
             <Button
                 android:id="@+id/button5"
+                style="@style/button_menu_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
                 tools:text="DESSERT" />
 
             <Button
                 android:id="@+id/button7"
+                style="@style/button_menu_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="Button"
                 tools:text="MENUS" />
